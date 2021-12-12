@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'CONTAM-prj-build'
+copyright = '2021, Chad W. Milando'
+author = 'Chad W. Milando'
 
 release = '0.1'
 version = '0.1.0'

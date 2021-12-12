@@ -1,12 +1,8 @@
-Welcome to Lumache's documentation!
+CONTAM prj build guide
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Lumache has its documentation hosted on Read the Docs.
+This doc details the process for creating CONTAM prjs for use_
+in health impact modeling.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
