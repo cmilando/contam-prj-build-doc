@@ -43,6 +43,13 @@ Internal wall leakage
 * You may want to simply create two-way elements the size of the openings and let mixing occur between zones based on differences in air density.Or, create one orifice high and one low => two-way flow can occur.
 
 
+In the absence of having any actual leakage tests for the building (which is usually the case), I recommend taking external leakage values from Andy Persily’s article “Myths about building envelopes”.  This publication summarizes the results of many known leakage tests, and breaks them down by building use and location.  Notice that Florida buildings are generally leakier, so you may wish to use these values in the south.  Also note that there are significant variations in leakage for similar buildings.  Therefore, you may wish to check your final results with a leakier or tighter building to test its sensitivity to these variables.  If the contaminant transport is primarily mechanically driven, then leakage may not be as important.  However, if it is migrating through walls or into stairwells, leakage could have a large influence.  Be sure to specify the same discharge coefficient and reference pressure drop as is used in the published data.  
+
+Certain elements, such as operable windows (particularly the automatic motorized ones) are very leaky.  If you know these are present, it’s a good idea to specify a somewhat low leakage per area value for the leakage you don’t know and to add to this leakage for the windows in their actual location.  I recommend this for any large leakage path that you have knowledge of.
+
+I usually assume that roofs have similar leakage to exterior walls and that interior walls and floors are leakier by at least a factor of two.
+
+
 Floor/Roof leakage
 ----------------------------------
 * Goes above each ceiling

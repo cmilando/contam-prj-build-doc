@@ -25,7 +25,28 @@ Drawing zones
 * Zone icons in similar positions
 * Arrange building in the north-south orientation 
 
+Zoning (roofs, walls, shafts, phantoms):  
+When establishing zones, remember that they are assumed to have uniform concentration throughout. _
+For some modeling problems, several rooms can be grouped together as a single zone, _ 
+while for others much more detail is needed.  For example, if a contaminant were _ 
+released in a closet, then the closet would need to be modeled as its own zone.  _
+Otherwise, the level of detail of closets is usually not needed.  _ 
+Often each room will be treated as a separate zone, but occasionally it is _ 
+desirable to sub-divide rooms.  My preference is to use the stair and shaft _ 
+models provided (based on fire research) for stair and elevator shafts.  _
+However, because the floor to floor leakage for these models is large, _
+the results in most cases often won’t be significantly different than _
+if another large leakage path were used.  One many people forget is to _
+put a roof on the building and give it leakage.  If this isn’t done, rooms _
+on the top floor will have a perfectly airtight roof.  _
+To add a roof, you specify a top level, and specify the smallest level height the program will allow.  Instead of defining a zone on this level, you place the “ambient” icon there.  
 
 Wind pressure profiles
 ----------------
 * Load wind profiles for external flow paths (ext door, wall_ext, and wdop) – Look at the NIST libraries for this: Data > WindPressureProfiles
+
+Weather 
+-------------------------------
+Weather:  You may encounter cases where it is desirable to investigate weather effects.  For example, if you are trying to size a depressurization (or pressurization) fan to maintain a space at a negative (positive) pressure, you would want to verify that the pressure difference can be maintained when stack and wind effects are present.  Working with temperatures is easy.  Wind is considerably more difficult, but is important since it can significantly affect results.  I recommend setting the local terrain constant and velocity profile exponent for wind based either on information supplied in the CONTAM help file or in material published regarding the LBNL model (see ASHRAE Fundamentals).  To do this, look at the site and match it to the closest qualitative description.  When in doubt, use the more obstructed condition, since I have found these descriptions to somewhat over-estimate leakage.  
+
+After you specify wind, you still won’t see any effects on your model until you follow another step.  You have to tell each leakage path whether it is on the windward or leeward side of the building, and how to calculate the incident wind pressure.  If you open up the dialog box for “airflow path properties”, you will see a tab for “wind pressure”.  The default is “none”, which means that regardless of the specified wind velocity, there is no pressure on the wall.  The “constant” model allows you to directly specify the pressure, which you might do if you had measurement data.  In almost any case where you are modeling wind, you will want to choose “variable”.  The wind speed modifier is calculated using the data you entered on the “weather” menu, and usually is the same for all paths, so it won’t need to be modified.  The wind pressure profile can be specified based on generic profiles published by ASHRAE.  See page 25.8 of the 1997 ASHRAE Fundamentals Handbook for this formulation and the assumptions on which it is based.  Once these items are defined, you should see wind effects.  Note:  since this is time consuming, you’ll want to put these profiles in before you copy floors for tall buildings.

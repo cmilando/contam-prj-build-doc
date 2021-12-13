@@ -30,3 +30,5 @@ Infectious virus
 * Sinks
 * Deposition
 * RH reaction?
+
+Contaminants:  The “molecular weight” doesn’t make a lot of sense for bacteria or spores, where you usually want to get a count.  Molecular weight is only used by the calculation to convert between volume and mass units – the program allows you to specify volume units but works in mass units.  What you can do is specify a count in mass units (for example, specify that one colony forming unit is equal to one mg/kg), and then conduct your simulation.  Your results will then be in terms of the unit you want.  The program will still require a molecular weight, buy you can specify any number since it isn’t used.  Also, I recommend a “trace” contaminant simulation for most purposes.  Non-trace contaminants (for example, water vapor) are present in such large quantities that they change the density of air.
