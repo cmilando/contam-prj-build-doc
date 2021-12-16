@@ -1,7 +1,7 @@
 CONTAM prj build guide
 ===================================
 
-Authors: C. Milando, C. Connolly
+Authors: C. Milando, C. L. Connolly
 
 This doc details the process for creating CONTAM prjs for use_
 in health impact modeling. Follow these instructuions to create and test new prjs.
