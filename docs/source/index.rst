@@ -11,6 +11,10 @@ Very helpful notes in each section added from a doc created by Amy Musser, 5-13-
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
+.. image:: img/merry-christmas-xmas.gif
+  :width: 400
+  :alt: Happy Holidays!
+
 Contents
 --------
 
