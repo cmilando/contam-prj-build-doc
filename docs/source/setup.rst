@@ -4,26 +4,33 @@ Initial setup
 Project options
 ----------------
 
-* View > Project options
+* View > Project options > Sketchpad Dimensions
 * Scaling factor = 0.5 ft resolution (walls need to be aligned in floors above/below, no 1 cell gaps, min 2 cell)
 * Pseudo-geometry on
 * # of levels = # of floors + 1 for level above roof
+* Level > Edit Level Data (or F8) 
 * Set the height of each level: zones are 9ft, basement is 8 ft attic is 4ft, roof is 4ft
-* Make area big enough to leave enough border all the way around
+* Click Replace to update the level height
+* Make area big enough to leave enough border all the way around; calculate this before drawing the zones 
 * Basement has to have negative elevation
 * Roof or Wall height to height of buildings
-* Terrain coefficient and exponents
+* Terrain coefficient and velocity profile exponents- select values relevant to surrounding land area you want to simulate (see table screenshot)
 * Have to unclick conditioned zones to make them not appear conditioned later and also in the conditioned volume
-* Load Closed schedule
+* Data > Day Schedules > Dimensionless (Or Week schedules)
+* Library - Browse (insert screenshot) 
+* Load Closed schedule [confirm what this exact name should be] 
 
 Drawing zones
 ------------------
-* Draw boxes, set origin
+* Draw boxes, Select Draw Box in the icons menu (the black square) to begin sketching 
+* Set origin by selecting point for the origin before selecting (View > Set Origin)
 * Round to the nearest 0.5 ft resolution
+* Right click in a designated zone and select "Zone" to define the zone
 * Zone names from the pre-defined list (e.g., L_kitchen, bathroom, den, bedroom1)
 * ZONE NAMES NEED TO BE UNIQUE!!!!! And systematic
 * Zone icons in similar positions
 * Arrange building in the north-south orientation 
+* Hover over zone icon to ensure height and volume are defined
 
 Zoning (roofs, walls, shafts, phantoms):  
 When establishing zones, remember that they are assumed to have uniform concentration throughout. _
