@@ -3,15 +3,22 @@ Configuring flow paths
 
 Windows
 -----------------------------------
-* Two types of windows exist: 
+* Two types of windows exist: ### save for later energyplus windows
 * glass windows (multiplier = 0) have prefix “wind” . No wind pressure profile. 2-way flow element with one opening. No schedule.
 * Use spreadsheet to get:
 * Height (some multiplier of room height)
 * Width (some multiplier of room width)
 * Flow path is XX relative height
+* Right click on wall to have a window and select "flow path" 
+* If not already done yet, double click on icon to load libraries (insert screenshot)
+* Select flow paths library and copy from library elements to "Load project elements" 
+* Select window (wdop; etc.) for the Flow Element name
+* From previous calculation on flow path relative height, add this to the Flow Path Reletaive Elevation
 * Icons located in the middle of the wall, position matters for the glass window, not ‘wdop’
 * Operable windows (4x4), prefix “wdop”, smaller to simulate cracking the window half open (schedule = closed). This has a wind pressure profile (variable). 2-way flow element with two opening
-* Both have Discharge parameter = 0.78
+* Both (what is both?) have Discharge parameter (coefficient) = 0.78 --> not both, just need the coeff
+* Confirm when you need the operable window and the window flow path element
+* Copy and paste a window onto each outside wall that contains a window
 
 Doors
 -----------------------------------
@@ -26,9 +33,14 @@ External wall leakage
 ------------------------------------
 * Standard practice is 3 per wall
 * You don’t change the element (wall_ext)
+* Right click on the wall and select Flow Path (similar to window flow path definition)
 * You modify the relative height and area, as per the spreadsheet
-* Set a wind pressure profile
-* Standard value is 5 cm2/m2
+* Set a wind pressure profile > Flow Path > Wind Pressure > Select "Variable" > under Name select the wind pressure profile
+* If necessary, select library, load, and copy wind pressure elements for the project
+* Standard value is 5 cm2/m2 - set by double clicking the airflow path, then selecting "edit element" for Flow Path and change to 5 cm2/m2
+* Copy airflow paths to all external walls
+* Make sure wind pressure profile is selected for all airflow paths on all external walls 
+* The wall leakage rates will update in all element assigned to the element profile
 
 Internal wall leakage
 ------------------------------------
@@ -55,11 +67,14 @@ Floor/Roof leakage
 * Goes above each ceiling
 * (so if you have basement and lvl1, it goes on lvl 1)
 * (for roof, it goes in the blank layer above the roof)
-* Roof wind pressure profile for roof_leakages
-* Evelation of roof/floor leaks is 0ft
+* Insert a roof/basement above/below current level as needed (Inert Blank Level > Above/below current level) 
+* Define airflow path and select roof leak (or other choice) for Flow Element Name
+* Go to Wind Pressure Tab to add profile and select variable
+* Roof wind pressure profile for roof_leakages (similar to adding wind pressure profiles for externall wall leakage rates; load library if necessary)
+* Elevation of roof/floor leaks is 0ft (names "relative elevation")
 * Stairs have to be the zone area
 * You have to modify for the area below. This can be easier with ‘reveal level below’ feature
-* Floor= int wal value
+* Floor= int wall value
 * Roof = ext wall value
 * If you are adding a roof that is peaked
 * then you should include an attic zone on level 4 and add another roof level.
