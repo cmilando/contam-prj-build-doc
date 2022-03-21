@@ -7,7 +7,11 @@ Setup
 * Each zone that has a supply also needs a return (unless you make it a plenum, see auxillary notes)
 * Position of AHS icon doesn’t matter
 * Add a MERV filter for both recirculation and Outside Air
-* Doesn’t matter what the flows are in CONTAM, EnergyPlus sets these
+* In the return and supply, set design flow rate to 588 scfm
+* AHS design flow rate is left at 0
+* Supply and Return get the OA/ventilation number (design flow rate) at 0.75*area^2 
+* Example for 28ft x 28 ft = 0.75*28^2 = 588 cfm/(28ft)^2; 588 scfm would go in the return and supply design flow rates (insert screenshot)
+* Only for EnergyPlus coupling: Doesn’t matter what the flows are in CONTAM, EnergyPlus sets these
 * Don’t set a schedule!
 
 .. note::
