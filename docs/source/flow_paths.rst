@@ -32,21 +32,22 @@ Doors
 External wall leakage
 ------------------------------------
 * Standard practice is 3 per wall
-* You don’t change the element (wall_ext)
+* The element (ext_wall) does not change
 * Right click on the wall and select Flow Path (similar to window flow path definition)
-* You modify the relative height and area, as per the spreadsheet
+* Modify the relative height and area, as per the spreadsheet
 * Set a wind pressure profile > Flow Path > Wind Pressure > Select "Variable" > under Name select the wind pressure profile
 * If necessary, select library, load, and copy wind pressure elements for the project
 * Standard value is 5 cm2/m2 - set by double clicking the airflow path, then selecting "edit element" for Flow Path and change to 5 cm2/m2
 * Copy airflow paths to all external walls
+* Make sure you copy all three to each external wall
 * Make sure wind pressure profile is selected for all airflow paths on all external walls 
 * The wall leakage rates will update in all element assigned to the element profile
 
 Internal wall leakage
 ------------------------------------
 * Standard practice is 3 per wall
-* You don’t change the element 
-* You modify the area, as per the wall area
+* The element (int_wall) does not change
+* Modify the area, as per the wall area
 * Position does not matter for calculation, but should be smart so you can easily scan them
 * This may differ for inter-apt vs intra-apt
 * Standard is 2 cm2/m2 for both
@@ -65,18 +66,17 @@ I usually assume that roofs have similar leakage to exterior walls and that inte
 Floor/Roof leakage
 ----------------------------------
 * Goes above each ceiling
-* (so if you have basement and lvl1, it goes on lvl 1)
-* (for roof, it goes in the blank layer above the roof)
+* (so if you have basement and level 1, it goes on level 1)
+* (for roof, it goes in the blank level above the roof)
 * Insert a roof/basement above/below current level as needed (Inert Blank Level > Above/below current level) 
 * Define airflow path and select roof leak (or other choice) for Flow Element Name
 * Go to Wind Pressure Tab to add profile and select variable
 * Roof wind pressure profile for roof_leakages (similar to adding wind pressure profiles for externall wall leakage rates; load library if necessary)
-* Elevation of roof/floor leaks is 0ft (names "relative elevation")
+* Elevation of roof/floor leaks is 0ft (named "relative elevation")
 * Stairs have to be the zone area
-* You have to modify for the area below. This can be easier with ‘reveal level below’ feature
-* Floor= int wall value
+* You have to modify for the area below. This can be easier with ‘reveal level below’ feature under "Level" in the tool bar.
+* Floor = int wall value
 * Roof = ext wall value
-* If you are adding a roof that is peaked
-* then you should include an attic zone on level 4 and add another roof level.
+* If you are adding a roof that is peaked, then you should include an attic zone on level 4 and add another roof level.
 * Roof level would then have attic ventilation as per specs I sent previously: typically, a ridge vent and soffit or eave vents.
 * Currently, your “roof” leaks are attic floor leaks which is why I was making these comments.

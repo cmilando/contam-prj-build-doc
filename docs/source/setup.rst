@@ -10,7 +10,7 @@ Project options
 * # of levels = # of floors + 1 for level above roof
 * Level > Edit Level Data (or F8) 
 * Set the height of each level: zones are 9ft, basement is 8 ft attic is 4ft, roof is 4ft
-* Click Replace to update the level height
+* Click Replace and the arrow to update the level height
 * Make area big enough to leave enough border all the way around; calculate this before drawing the zones 
 * Basement has to have negative elevation
 * Roof or Wall height to height of buildings
