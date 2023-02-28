@@ -1,6 +1,10 @@
 The future of CONTAM prj work
 =================================
 
+.. image:: img/merry-christmas-xmas.gif
+  :width: 400
+  :alt: Happy Holidays!
+
 Eventually, the CONTAM input file will be a JSON file. _ 
 At that point, a number of scripts to check things will be possible.
 
